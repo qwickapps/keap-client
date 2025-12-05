@@ -111,7 +111,7 @@ export class KeapClient {
         }
         throw new Error(`Failed to get contact: ${response.status}`);
       }
-      return response.json();
+      return await response.json() as KeapContact;
     } catch (error) {
       console.error(`Error getting contact ${contactId}:`, error);
       return null;
@@ -281,7 +281,7 @@ export class KeapClient {
         throw new Error(`Authentication failed: ${response.status} ${errorText}`);
       }
 
-      const tokenData: KeapTokenResponse = await response.json();
+      const tokenData = await response.json() as KeapTokenResponse;
       this.accessToken = tokenData.access_token;
       this.tokenExpiry = new Date(Date.now() + (tokenData.expires_in * 1000));
 
@@ -314,7 +314,7 @@ export class KeapClient {
       }
     });
 
-    const data = await response.json();
+    const data = await response.json() as { contacts?: KeapContact[] };
     const contacts = data.contacts;
     return contacts && contacts.length > 0 ? contacts[0] : null;
   }
@@ -325,7 +325,7 @@ export class KeapClient {
   private async getContactTagsWithDetails(contactId: number): Promise<KeapContactTag[]> {
     try {
       const response = await this.makeAuthenticatedRequest(`/contacts/${contactId}/tags`);
-      const data = await response.json();
+      const data = await response.json() as { tags?: KeapContactTag[] };
       return data.tags || [];
     } catch (error) {
       console.warn(`Failed to get tags for contact ${contactId}:`, error);
@@ -365,7 +365,7 @@ export class KeapClient {
       searchParams
     });
 
-    const data = await response.json();
+    const data = await response.json() as { contacts?: KeapContact[]; count?: number; next?: string };
     return {
       contacts: data.contacts || [],
       count: data.count || (data.contacts?.length ?? 0),
@@ -393,7 +393,7 @@ export class KeapClient {
         }
       });
 
-      const data = await response.json();
+      const data = await response.json() as { tags?: Array<{ id: number; name: string }> };
       const tags = data.tags || [];
 
       for (const tag of tags) {
@@ -422,7 +422,7 @@ export class KeapClient {
       }
     });
 
-    const data = await response.json();
+    const data = await response.json() as { count?: number };
     // Keap API returns total count in the response
     return data.count || 0;
   }
