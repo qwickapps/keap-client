@@ -1,0 +1,58 @@
+# PolyForm Shield License 1.0.0
+
+<https://polyformproject.org/licenses/shield/1.0.0>
+
+## Acceptance
+
+In order to receive this license, you must agree to its rules.  The rules of this license are both obligations under that agreement and conditions to your license.  You must not do anything with this software that triggers a rule that you cannot or will not follow.
+
+## Copyright License
+
+Each contributor licenses you to do everything with this software that would otherwise infringe that contributor's copyright in it.
+
+## Notices
+
+You must ensure that everyone who gets a copy of any part of this software from you, with or without changes, also gets the text of this license and the contributor and source disclosure requirements below.
+
+## Excuse
+
+If anyone notifies you in writing that you have not complied with *Notices*, you can keep your license by taking all practical steps to comply within 30 days after the notice.  If you do not do so, your license ends immediately.
+
+## Patent License
+
+Each contributor licenses you to do everything with this software that would otherwise infringe any patent claims they can license or become able to license.
+
+## Reliability
+
+No contributor can revoke this license.
+
+## No Liability
+
+***As far as the law allows, this software comes as is, without any warranty or condition, and no contributor will be liable to anyone for any damages related to this software or this license, under any kind of legal claim.***
+
+## Defensive Termination
+
+If you make any written claim that this software infringes or contributes to infringement of any patent, your license for this software granted under these terms ends immediately. If your company makes such a claim, your license ends immediately for work on behalf of your company.
+
+## Shield
+
+You may not use this software to compete with the software provider.
+
+## Source Disclosure
+
+You must ensure that everyone who gets a copy of any part of this software from you, with or without changes, also gets or can get a copy of the source code of this software by the same means, without any additional charge.
+
+## Contributor Disclosure
+
+You must ensure that everyone who gets a copy of any part of this software from you also gets the following information:
+
+* The name of each contributor.
+* A link to [the original source repository](https://github.com/qwickapps/qwickapps).
+
+---
+
+**QwickApps Interpretation Notes:**
+
+- **"Compete with the software provider"** means using this software to create competing React frameworks, CMS systems, or application builders that would be considered direct competitors to QwickApps.
+- **Permitted uses** include: internal business applications, learning/education, non-competitive commercial applications, academic research.
+- **Contact us** at legal@qwickapps.com for commercial licensing if your use case might be competitive.
